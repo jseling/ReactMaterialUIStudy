@@ -1,8 +1,23 @@
-// import React from 'react';
-import { Button } from '@material-ui/core';
+import React from 'react';
+import { Button, ThemeProvider, createTheme } from '@material-ui/core';
 
 function App() {
-  return <Button variant="contained" color="primary">Botão</Button>;
+
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: '#f44336',
+      },
+    },
+  });
+
+  return (
+  <ThemeProvider theme={theme}>
+    <Button variant="contained" color="primary">
+      Botão
+    </Button>
+  </ThemeProvider>
+  );
 }
 
 export default App;

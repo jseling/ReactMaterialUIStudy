@@ -32,3 +32,38 @@ https://material-ui.com/customization/color/
 
 Buttons:
 https://material-ui.com/components/buttons/#button
+
+//Css Baseline
+Reseta as configurações de CSS padrão.
+Configurado no index.js com:
+
+```
+import { CssBaseline } from '@material-ui/core';
+```
+e
+
+```
+<CssBaseline />
+```
+
+//Theme Provider
+Customizar as cores
+
+https://material-ui.com/customization/theming/
+
+```
+import { ThemeProvider, createTheme } from '@material-ui/core';
+
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: '#f44336',
+      },
+    },
+  });
+
+
+  <ThemeProvider theme={theme}>
+    <>
+  </ThemeProvider>
+```  
