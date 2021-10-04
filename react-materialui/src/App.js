@@ -1,21 +1,32 @@
 import React from 'react';
-import { Button, ThemeProvider, createTheme } from '@material-ui/core';
+import { ThemeProvider, createTheme, makeStyles } from '@material-ui/core';
+import Home from './Home';
+
+const useStyles = makeStyles({
+  root: {
+  }
+});
+
 
 function App() {
 
   const theme = createTheme({
-    palette: {
+    spacing: 4,
+    palette: {      
       primary: {
-        main: '#f44336',
+        main: '#92b139',
       },
+      secondary: {
+        main: '#bfe2de',
+      }
     },
   });
 
+  const classes = useStyles();
+
   return (
   <ThemeProvider theme={theme}>
-    <Button variant="contained" color="primary">
-      Botão
-    </Button>
+    <Home/>
   </ThemeProvider>
   );
 }
